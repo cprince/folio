@@ -11,4 +11,8 @@ module ApplicationHelper
     end
   end
 
+  def logo
+    image_tag("folio.png", :alt => "Folio App", :class => "round")
+  end
+
 end
