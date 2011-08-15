@@ -30,9 +30,11 @@ RSpec.configure do |config|
   end
 
   def integration_sign_in(user)
+    u_email = user ? user.email : ""
+    u_password = user ? user.password : ""
     visit signin_path
-    fill_in :email,    :with => user.email
-    fill_in :password, :with => user.password
+    fill_in :email,    :with => u_email
+    fill_in :password, :with => u_password
     click_button
   end
 
